@@ -1,0 +1,20 @@
+﻿@model Configuracao
+<form method="get" action="Configuracao/Index" style="display:flex; flex-direction:column">
+    @Html.LabelFor( m => m.Fruta)
+    @Html.EditorFor( m => m.Fruta)
+    @Html.ValidationMessageFor( m => m.Fruta)
+
+    @Html.LabelFor( m => m.Gosto)
+    @Html.EditorFor( m => m.Gosto)
+    @Html.ValidationMessageFor( m => m.Gosto)
+
+    @Html.LabelFor( m => m.Cor)
+    @Html.EditorFor( m => m.Cor)
+    @Html.ValidationMessageFor( m => m.Cor)
+
+    @Html.LabelFor( m => m.Akuma)
+    @Html.EditorFor( m => m.Akuma)
+    @Html.ValidationMessageFor( m => m.Akuma)
+
+    <button type="submit" >Enviar</button>
+</form>

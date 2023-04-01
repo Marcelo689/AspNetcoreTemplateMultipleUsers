@@ -1,0 +1,30 @@
+﻿@using PraticandoASPCORE.ViewModel
+@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @if(Model.Users != null)
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Ip</th>  <th>Nome Usuário</th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var user in @Model.Users)
+        {
+            <tr>
+                <td>@user.Ip</td>
+                <td>@user.Name</td>
+            </tr>
+        }
+            </tbody>
+        </table>
+    }
+</div>
